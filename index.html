@@ -140,6 +140,7 @@
     .brand {
       display: inline-flex;
       align-items: center;
+      gap: 11px;
       flex-shrink: 0;
     }
 
@@ -153,6 +154,31 @@
       border: 1px solid #e5eaf2;
       border-radius: 10px;
       box-shadow: 0 5px 14px rgba(16, 24, 39, .1);
+    }
+
+    .brand-copy {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 3px;
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    .brand-ar {
+      direction: rtl;
+      color: #087d45;
+      font-family: Tahoma, Arial, sans-serif;
+      font-size: 15px;
+      font-weight: 850;
+    }
+
+    .brand-en {
+      direction: ltr;
+      color: #102b55;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .25px;
     }
 
     .desktop-nav {
@@ -1179,6 +1205,16 @@
       box-shadow: 0 9px 24px rgba(0, 0, 0, .24);
     }
 
+    .footer .brand-ar {
+      color: #8de0ac;
+      font-size: 17px;
+    }
+
+    .footer .brand-en {
+      color: #fff;
+      font-size: 12px;
+    }
+
     .footer-description {
       max-width: 280px;
       margin-top: 18px;
@@ -1567,6 +1603,22 @@
         width: 45px;
       }
 
+      .brand {
+        gap: 8px;
+      }
+
+      .brand-copy {
+        gap: 2px;
+      }
+
+      .brand-ar {
+        font-size: 13px;
+      }
+
+      .brand-en {
+        font-size: 9px;
+      }
+
       .category-links {
         gap: 20px;
       }
@@ -1853,6 +1905,10 @@
     <div class="container header-main">
       <a class="brand" href="#home" aria-label="Arbeel homepage">
         <img class="brand-logo-image" src="logo.jpg" width="300" height="300" alt="Arbeel">
+        <span class="brand-copy">
+          <span class="brand-ar" lang="ar" dir="rtl">اربيل للتجارة</span>
+          <span class="brand-en" lang="en" dir="ltr">Arbeel Trading</span>
+        </span>
       </a>
 
       <nav class="desktop-nav" aria-label="Main navigation">
@@ -2190,6 +2246,10 @@
       <div>
         <a class="brand" href="#home" aria-label="Arbeel homepage">
           <img class="brand-logo-image" src="logo.jpg" width="300" height="253" loading="lazy" decoding="async" alt="Arbeel">
+          <span class="brand-copy">
+            <span class="brand-ar" lang="ar" dir="rtl">اربيل للتجارة</span>
+            <span class="brand-en" lang="en" dir="ltr">Arbeel Trading</span>
+          </span>
         </a>
         <p class="footer-description">
           Your trusted B2B partner for smartphones, accessories, electronics and gaming products across IRAQ.
