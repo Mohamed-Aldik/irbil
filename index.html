@@ -1,0 +1,2447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101827">
+  <meta name="description" content="ThePhoneHub — Europe's trusted B2B smartphone supplier. Wholesale smartphones, accessories and electronics with competitive prices and fast EU shipping.">
+  <title>ThePhoneHub — Europe's Trusted B2B Smartphone Supplier</title>
+  <style>
+    :root {
+      --primary: #2463eb;
+      --primary-dark: #1748bc;
+      --navy: #101827;
+      --navy-light: #172337;
+      --text: #172033;
+      --muted: #667085;
+      --border: #e5eaf1;
+      --bg: #f7f9fc;
+      --white: #fff;
+      --green: #159b69;
+      --radius: 14px;
+      --container: 1160px;
+      --shadow: 0 10px 35px rgba(17, 35, 65, .07);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background: #fff;
+      font-size: 15px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button, input, select, textarea {
+      font: inherit;
+    }
+
+    button, a, input, select, textarea {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(var(--container), calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    .announcement {
+      background: var(--navy);
+      color: #cbd5e1;
+      font-size: 12px;
+    }
+
+    .announcement-inner {
+      min-height: 38px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .announcement-items {
+      display: flex;
+      align-items: center;
+      gap: 23px;
+      flex-wrap: wrap;
+    }
+
+    .announcement-items span {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .announcement-items .mini-icon {
+      color: #79a8ff;
+    }
+
+    .language {
+      color: #fff;
+      background: transparent;
+      border: 0;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 5px;
+    }
+
+    .header {
+      background: #fff;
+      border-bottom: 1px solid #edf0f5;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-main {
+      min-height: 79px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .brand-logo-image {
+      display: block;
+      width: 52px;
+      height: auto;
+      padding: 3px;
+      object-fit: contain;
+      background: #fff;
+      border: 1px solid #e5eaf2;
+      border-radius: 10px;
+      box-shadow: 0 5px 14px rgba(16, 24, 39, .1);
+    }
+
+    .desktop-nav {
+      display: flex;
+      align-items: center;
+      gap: 27px;
+    }
+
+    .desktop-nav > a {
+      color: #384357;
+      font-size: 13px;
+      font-weight: 600;
+      transition: color .2s;
+    }
+
+    .desktop-nav > a:hover,
+    .category-links a:hover {
+      color: var(--primary);
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      min-height: 44px;
+      padding: 0 20px;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      transition: background .2s, transform .2s, box-shadow .2s;
+      line-height: 1.3;
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+    }
+
+    .button-primary {
+      color: #fff;
+      background: var(--primary);
+      box-shadow: 0 4px 10px #2463eb22;
+    }
+
+    .button-primary:hover {
+      background: var(--primary-dark);
+      box-shadow: 0 7px 17px #2463eb33;
+    }
+
+    .button-outline {
+      color: #fff;
+      background: transparent;
+      border-color: #ffffff52;
+    }
+
+    .button-outline:hover {
+      background: #ffffff13;
+    }
+
+    .button-light {
+      color: #234fc4;
+      background: #fff;
+    }
+
+    .button-light:hover {
+      background: #eef4ff;
+    }
+
+    .button svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .category-bar {
+      border-top: 1px solid #f0f2f6;
+      background: #fff;
+    }
+
+    .category-links {
+      min-height: 43px;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .category-links::-webkit-scrollbar {
+      display: none;
+    }
+
+    .category-links a {
+      flex-shrink: 0;
+      color: #667085;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .category-links a:first-child {
+      color: var(--primary);
+    }
+
+    .mobile-toggle {
+      display: none;
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      color: var(--text);
+      background: #fff;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mobile-toggle svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    .mobile-nav {
+      display: none;
+      padding: 10px 24px 20px;
+      border-top: 1px solid var(--border);
+      background: #fff;
+    }
+
+    .mobile-nav.open {
+      display: grid;
+      gap: 3px;
+    }
+
+    .mobile-nav a {
+      padding: 10px 0;
+      font-size: 14px;
+      font-weight: 600;
+      color: #344054;
+    }
+
+    .mobile-nav .button {
+      margin-top: 8px;
+      color: #fff;
+    }
+
+    .hero {
+      overflow: hidden;
+      position: relative;
+      color: #fff;
+      background:
+        radial-gradient(ellipse at 77% 46%, #254f9a45 0, transparent 43%),
+        linear-gradient(120deg, #101827 0%, #14233d 65%, #101827 100%);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      top: -300px;
+      right: -80px;
+      border: 1px solid #ffffff0b;
+      border-radius: 50%;
+      box-shadow: 0 0 0 65px #ffffff06, 0 0 0 130px #ffffff04;
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      min-height: 440px;
+      display: grid;
+      grid-template-columns: 1.06fr .94fr;
+      align-items: center;
+      gap: 45px;
+      padding-top: 58px;
+      padding-bottom: 58px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 21px;
+      color: #a8c5ff;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+    }
+
+    .eyebrow-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #6fa1ff;
+      box-shadow: 0 0 12px #6fa1ff8c;
+    }
+
+    .hero h1 {
+      max-width: 600px;
+      font-size: clamp(39px, 4.4vw, 58px);
+      line-height: 1.1;
+      letter-spacing: -2.5px;
+      font-weight: 800;
+    }
+
+    .hero h1 span {
+      display: block;
+      color: #7da9ff;
+    }
+
+    .hero-description {
+      max-width: 530px;
+      margin-top: 23px;
+      color: #c0cada;
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    .hero-benefits {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px 20px;
+      margin-top: 22px;
+    }
+
+    .hero-benefits span {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      color: #e1e8f4;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .hero-benefits svg {
+      width: 15px;
+      height: 15px;
+      color: #72cfa6;
+      flex-shrink: 0;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .hero-art {
+      min-height: 330px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .art-orbit {
+      position: absolute;
+      width: 340px;
+      height: 340px;
+      border: 1px solid #91b9ff1b;
+      border-radius: 50%;
+    }
+
+    .art-orbit::before,
+    .art-orbit::after {
+      content: "";
+      position: absolute;
+      border: 1px solid #91b9ff15;
+      border-radius: 50%;
+    }
+
+    .art-orbit::before {
+      inset: 25px;
+    }
+
+    .art-orbit::after {
+      inset: 50px;
+    }
+
+    .device {
+      width: 143px;
+      height: 282px;
+      position: relative;
+      z-index: 2;
+      border: 5px solid #626d7e;
+      border-radius: 27px;
+      padding: 6px;
+      background: #05070c;
+      box-shadow: 0 25px 55px #0000006b, inset 0 0 0 1px #ffffff26;
+      transform: rotate(-9deg) translateX(-36px);
+    }
+
+    .device-screen {
+      height: 100%;
+      width: 100%;
+      border-radius: 19px;
+      overflow: hidden;
+      position: relative;
+      background:
+        radial-gradient(ellipse at 25% 30%, #e2b7ff 0, transparent 31%),
+        radial-gradient(ellipse at 80% 30%, #5a79f5 0, transparent 40%),
+        radial-gradient(ellipse at 52% 78%, #f08dca 0, transparent 38%),
+        linear-gradient(145deg, #7ca8ff, #332b8d 70%, #111b4b);
+    }
+
+    .device-screen::before {
+      content: "";
+      position: absolute;
+      top: -35px;
+      right: -45px;
+      width: 130px;
+      height: 230px;
+      border-radius: 50%;
+      transform: rotate(35deg);
+      background: linear-gradient(180deg, #ffffff6e, #ffffff00);
+      filter: blur(4px);
+    }
+
+    .device-screen::after {
+      content: "";
+      position: absolute;
+      left: 18px;
+      bottom: 25px;
+      width: 70px;
+      height: 100px;
+      border-radius: 50%;
+      background: #e7a6ff4a;
+      filter: blur(20px);
+    }
+
+    .device-island {
+      position: absolute;
+      width: 52px;
+      height: 15px;
+      top: 6px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #05070c;
+      border-radius: 20px;
+      z-index: 2;
+    }
+
+    .device-back {
+      position: absolute;
+      width: 143px;
+      height: 282px;
+      z-index: 1;
+      border: 5px solid #c7cbd3;
+      border-radius: 27px;
+      padding: 7px;
+      background: linear-gradient(135deg, #f0f0f4, #adb6c7 50%, #e4e7ec);
+      box-shadow: 0 25px 55px #0000004f;
+      transform: rotate(10deg) translateX(56px);
+    }
+
+    .camera-module {
+      display: grid;
+      grid-template-columns: 30px 30px;
+      grid-template-rows: 30px 30px;
+      gap: 4px;
+      width: fit-content;
+      padding: 6px;
+      background: #e0e4ec;
+      border-radius: 14px;
+      box-shadow: inset 0 0 0 1px #8993a6;
+    }
+
+    .camera {
+      border: 3px solid #515866;
+      border-radius: 50%;
+      background: radial-gradient(circle at 40% 35%, #697eaa 0, #101723 55%, #080b10 70%);
+    }
+
+    .camera-flash {
+      width: 9px;
+      height: 9px;
+      margin: 9px auto;
+      border-radius: 50%;
+      background: #fff;
+      box-shadow: 0 0 3px #fff;
+    }
+
+    .art-card {
+      position: absolute;
+      z-index: 4;
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      padding: 13px 16px;
+      border: 1px solid #ffffff20;
+      border-radius: 12px;
+      background: #ffffff12;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 10px 30px #00000022;
+    }
+
+    .art-card-icon {
+      width: 36px;
+      height: 36px;
+      display: grid;
+      place-items: center;
+      border-radius: 9px;
+      background: #477dfc2b;
+      color: #94b6ff;
+    }
+
+    .art-card-icon svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .art-card strong {
+      display: block;
+      font-size: 12px;
+      line-height: 1.5;
+      color: #fff;
+    }
+
+    .art-card small {
+      display: block;
+      font-size: 10px;
+      color: #bdc9dc;
+    }
+
+    .art-card-one {
+      top: 47px;
+      right: 0;
+    }
+
+    .art-card-two {
+      bottom: 34px;
+      left: -4px;
+    }
+
+    .art-card-two .art-card-icon {
+      color: #78d8ae;
+      background: #22a87924;
+    }
+
+    .section {
+      padding: 85px 0;
+    }
+
+    .section-soft {
+      background: var(--bg);
+    }
+
+    .section-heading {
+      max-width: 670px;
+      margin: 0 auto 42px;
+      text-align: center;
+    }
+
+    .section-kicker {
+      color: var(--primary);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1.7px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .section-heading h2 {
+      color: #152137;
+      font-size: clamp(27px, 3vw, 35px);
+      line-height: 1.25;
+      letter-spacing: -1.1px;
+      font-weight: 800;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.9;
+      margin-top: 13px;
+    }
+
+    .product-showcase {
+      position: relative;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 7px;
+      overflow: hidden;
+      border: 1px solid #b9cff6;
+      border-radius: 22px;
+      background: linear-gradient(145deg, #fff 0%, #eaf2ff 55%, #d8e7ff 100%);
+      box-shadow:
+        0 24px 60px rgba(25, 75, 158, .16),
+        0 7px 18px rgba(18, 39, 76, .09);
+      isolation: isolate;
+    }
+
+    .product-showcase::before {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      inset: 7px;
+      pointer-events: none;
+      border: 1px solid rgba(255, 255, 255, .7);
+      border-radius: 15px;
+      box-shadow: inset 0 0 32px rgba(0, 72, 201, .08);
+    }
+
+    .product-showcase img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 15px;
+      transition: transform .45s ease, filter .45s ease;
+    }
+
+    .product-showcase:hover img {
+      transform: scale(1.008);
+      filter: saturate(1.03) contrast(1.015);
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 55px;
+      padding: 32px 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .stat {
+      text-align: center;
+      padding: 5px 20px;
+      border-right: 1px solid var(--border);
+    }
+
+    .stat:last-child {
+      border-right: 0;
+    }
+
+    .stat strong {
+      display: block;
+      color: var(--primary);
+      font-size: 34px;
+      line-height: 1.3;
+      letter-spacing: -1.3px;
+      font-weight: 850;
+    }
+
+    .stat span {
+      display: block;
+      margin-top: 4px;
+      color: #667085;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .trusted {
+      text-align: center;
+      margin-top: 38px;
+    }
+
+    .trusted-label {
+      color: #7a8496;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .brand-logos {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(22px, 5vw, 65px);
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+
+    .brand-logo {
+      color: #5c6677;
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: -.6px;
+    }
+
+    .brand-logo.apple {
+      font-size: 29px;
+    }
+
+    .brand-logo.samsung {
+      font-size: 18px;
+      letter-spacing: 1px;
+    }
+
+    .brand-logo.google {
+      font-size: 20px;
+      letter-spacing: -1px;
+    }
+
+    .brand-logo.xiaomi {
+      font-size: 16px;
+    }
+
+    .trust-strip {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 18px 35px;
+      margin-top: 40px;
+      padding: 19px 20px;
+      border-radius: 10px;
+      background: #eef4ff;
+    }
+
+    .trust-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #344767;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .trust-item svg {
+      width: 17px;
+      height: 17px;
+      color: var(--primary);
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .step-card {
+      position: relative;
+      padding: 29px 26px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: #fff;
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .step-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .step-number {
+      display: grid;
+      place-items: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      color: var(--primary);
+      background: #edf3ff;
+      font-size: 17px;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    .step-card h3 {
+      font-size: 16px;
+      letter-spacing: -.3px;
+      margin-bottom: 8px;
+    }
+
+    .step-card p {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.9;
+    }
+
+    .cta-band {
+      position: relative;
+      overflow: hidden;
+      padding: 43px 45px;
+      border-radius: 16px;
+      color: #fff;
+      background:
+        radial-gradient(circle at 95% 0%, #6697ff3a, transparent 38%),
+        linear-gradient(115deg, #1c4fc1, #2868ed 65%, #1748b7);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .cta-band::after {
+      content: "";
+      position: absolute;
+      width: 250px;
+      height: 250px;
+      right: 120px;
+      top: -170px;
+      border: 1px solid #ffffff19;
+      border-radius: 50%;
+      box-shadow: 0 0 0 35px #ffffff09, 0 0 0 70px #ffffff07;
+      pointer-events: none;
+    }
+
+    .cta-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-band h2 {
+      font-size: clamp(23px, 3vw, 30px);
+      line-height: 1.3;
+      letter-spacing: -.8px;
+      font-weight: 800;
+    }
+
+    .cta-band p {
+      margin-top: 9px;
+      max-width: 590px;
+      color: #d9e5ff;
+      font-size: 12px;
+    }
+
+    .cta-band .button {
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+    }
+
+    .feature-card {
+      padding: 24px 20px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: #fff;
+      transition: box-shadow .2s, transform .2s;
+    }
+
+    .feature-card:hover {
+      box-shadow: var(--shadow);
+      transform: translateY(-3px);
+    }
+
+    .feature-icon {
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      border-radius: 11px;
+      color: var(--primary);
+      background: #edf3ff;
+      margin-bottom: 19px;
+    }
+
+    .feature-icon svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    .feature-card h3 {
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 8px;
+    }
+
+    .feature-card p {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.85;
+    }
+
+    .offer-intro {
+      max-width: 750px;
+      margin: -22px auto 38px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 13px;
+      line-height: 1.9;
+    }
+
+    .offer-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .offer-card {
+      display: flex;
+      flex-direction: column;
+      padding: 27px 24px;
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      background: #fff;
+      box-shadow: 0 4px 16px #162c5005;
+    }
+
+    .offer-card.featured {
+      border-color: #9bbaff;
+      box-shadow: 0 10px 35px #2463eb10;
+    }
+
+    .offer-icon {
+      display: grid;
+      place-items: center;
+      width: 48px;
+      height: 48px;
+      margin-bottom: 19px;
+      border-radius: 12px;
+      background: #edf3ff;
+      color: var(--primary);
+    }
+
+    .offer-icon svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .offer-card h3 {
+      font-size: 18px;
+      letter-spacing: -.4px;
+      margin-bottom: 10px;
+    }
+
+    .offer-card > p {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.9;
+      margin-bottom: 19px;
+    }
+
+    .feed-code {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 7px;
+      padding: 12px;
+      border: 1px solid #dce5f3;
+      border-radius: 8px;
+      background: #f7f9fd;
+      margin-bottom: 17px;
+    }
+
+    .live-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      color: #15815b;
+      font-size: 9px;
+      font-weight: 850;
+      letter-spacing: .5px;
+    }
+
+    .live-label::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      background: #20b67a;
+      border-radius: 50%;
+    }
+
+    .feed-url {
+      width: 100%;
+      overflow-wrap: anywhere;
+      color: #47546b;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 10px;
+    }
+
+    .copy-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      width: fit-content;
+      color: var(--primary);
+      border: 0;
+      background: transparent;
+      font-size: 11px;
+      font-weight: 750;
+      margin-bottom: 16px;
+    }
+
+    .copy-button svg {
+      width: 14px;
+      height: 14px;
+    }
+
+    .api-code {
+      display: block;
+      padding: 12px;
+      border: 1px solid #dce5f3;
+      border-radius: 8px;
+      background: #f7f9fd;
+      color: #47546b;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 10px;
+      margin-bottom: 17px;
+    }
+
+    .api-code span {
+      color: #16835e;
+      font-weight: 800;
+    }
+
+    .offer-card .button {
+      width: 100%;
+      margin-top: auto;
+    }
+
+    .offer-list {
+      list-style: none;
+      margin: -2px 0 20px;
+    }
+
+    .offer-list li {
+      position: relative;
+      padding-left: 21px;
+      color: #475467;
+      font-size: 11px;
+      margin: 8px 0;
+    }
+
+    .offer-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #159b69;
+      font-weight: 800;
+    }
+
+    .testimonial-wrap {
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    .testimonial {
+      position: relative;
+      padding: 37px 40px 34px;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      background: #fff;
+      box-shadow: var(--shadow);
+    }
+
+    .quote-mark {
+      font-family: Georgia, serif;
+      font-size: 65px;
+      line-height: .9;
+      height: 45px;
+      color: #b6ccff;
+    }
+
+    .testimonial blockquote {
+      margin-top: 13px;
+      color: #344054;
+      font-size: 15px;
+      line-height: 1.95;
+      font-weight: 500;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      margin-top: 25px;
+      padding-top: 21px;
+      border-top: 1px solid var(--border);
+    }
+
+    .avatar {
+      width: 43px;
+      height: 43px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      color: #2057d0;
+      background: #e9f0ff;
+      font-size: 12px;
+      font-weight: 850;
+    }
+
+    .testimonial-author strong {
+      display: block;
+      color: #1b2639;
+      font-size: 13px;
+    }
+
+    .testimonial-author span {
+      display: block;
+      color: #778196;
+      font-size: 11px;
+    }
+
+    .contact-section {
+      background: #f7f9fc;
+    }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .contact-info-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 31px;
+      box-shadow: 0 5px 20px #172b4d04;
+    }
+
+    .contact-info-card h3 {
+      color: #182439;
+      font-size: 20px;
+      letter-spacing: -.4px;
+    }
+
+    .contact-info-card > p {
+      margin-top: 6px;
+      margin-bottom: 23px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.9;
+    }
+
+    .contact-image-card {
+      position: relative;
+      margin: 0;
+      padding: 6px;
+      overflow: hidden;
+      border: 1px solid #d9e2f0;
+      border-radius: 16px;
+      background: linear-gradient(145deg, #fff, #edf3fb);
+      box-shadow:
+        0 22px 50px rgba(23, 43, 77, .13),
+        0 5px 15px rgba(23, 43, 77, .07);
+    }
+
+    .contact-image-card::after {
+      content: "";
+      position: absolute;
+      inset: 6px;
+      pointer-events: none;
+      border: 1px solid rgba(255, 255, 255, .64);
+      border-radius: 10px;
+      box-shadow: inset 0 0 28px rgba(17, 50, 98, .08);
+    }
+
+    .contact-image-card img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .contact-details {
+      display: grid;
+      gap: 22px;
+    }
+
+    .contact-detail {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+    }
+
+    .detail-icon {
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      width: 41px;
+      height: 41px;
+      border-radius: 10px;
+      color: var(--primary);
+      background: #edf3ff;
+    }
+
+    .detail-icon svg {
+      width: 19px;
+      height: 19px;
+    }
+
+    .contact-detail h4 {
+      color: #28354a;
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 2px;
+    }
+
+    .contact-detail p,
+    .contact-detail a {
+      color: #667085;
+      font-size: 12px;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-detail a:hover {
+      color: var(--primary);
+    }
+
+    .partner-note {
+      margin-top: 29px;
+      padding: 19px;
+      border: 1px solid #dce8ff;
+      border-radius: 10px;
+      background: #f4f7ff;
+    }
+
+    .partner-note h4 {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #244ca1;
+      font-size: 13px;
+      margin-bottom: 7px;
+    }
+
+    .partner-note h4 svg {
+      width: 17px;
+      height: 17px;
+    }
+
+    .partner-note p {
+      color: #536482;
+      font-size: 11px;
+      line-height: 1.9;
+    }
+
+    .footer {
+      color: #b9c4d5;
+      background: #101827;
+    }
+
+    .footer-main {
+      display: grid;
+      grid-template-columns: 1.4fr .8fr .9fr 1fr;
+      gap: 45px;
+      padding-top: 61px;
+      padding-bottom: 49px;
+    }
+
+    .footer .brand-logo-image {
+      width: 70px;
+      padding: 5px;
+      border-color: rgba(255, 255, 255, .16);
+      border-radius: 12px;
+      box-shadow: 0 9px 24px rgba(0, 0, 0, .24);
+    }
+
+    .footer-description {
+      max-width: 280px;
+      margin-top: 18px;
+      color: #9eacc0;
+      font-size: 12px;
+      line-height: 1.95;
+    }
+
+    .footer-column h4 {
+      color: #fff;
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 19px;
+    }
+
+    .footer-links {
+      display: grid;
+      gap: 10px;
+      list-style: none;
+    }
+
+    .footer-links a {
+      color: #a9b5c7;
+      font-size: 11px;
+      transition: color .2s;
+    }
+
+    .footer-links a:hover {
+      color: #fff;
+    }
+
+    .footer-contact li {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      color: #a9b5c7;
+      font-size: 11px;
+      line-height: 1.8;
+    }
+
+    .footer-contact svg {
+      width: 15px;
+      height: 15px;
+      margin-top: 4px;
+      flex-shrink: 0;
+      color: #7da7ff;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #ffffff13;
+    }
+
+    .footer-bottom-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    .footer-bottom p {
+      color: #8492a8;
+      font-size: 10px;
+    }
+
+    .legal-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .legal-links a {
+      color: #a9b5c7;
+      font-size: 10px;
+    }
+
+    .legal-links a:hover {
+      color: #fff;
+    }
+
+    .back-to-top {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 90;
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      border: 0;
+      border-radius: 10px;
+      background: var(--primary);
+      box-shadow: 0 5px 18px #173b8c35;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(8px);
+      transition: .2s;
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .back-to-top svg {
+      width: 19px;
+      height: 19px;
+    }
+
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    @media (min-width: 1400px) {
+      .hero-grid {
+        min-height: 475px;
+      }
+    }
+
+    @media (max-width: 1050px) {
+      .desktop-nav {
+        gap: 16px;
+      }
+
+      .desktop-nav > a {
+        font-size: 12px;
+      }
+
+      .header-main > .button {
+        padding: 0 13px;
+      }
+
+      .hero-grid {
+        gap: 15px;
+      }
+
+      .hero-art {
+        transform: scale(.91);
+      }
+
+      .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-main {
+        grid-template-columns: 1.2fr 1fr 1fr;
+        gap: 35px;
+      }
+
+      .footer-main > div:first-child {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (max-width: 780px) {
+      .container {
+        width: min(100% - 36px, var(--container));
+      }
+
+      .announcement-inner {
+        min-height: 36px;
+      }
+
+      .announcement-items {
+        gap: 8px 15px;
+      }
+
+      .announcement-items span {
+        font-size: 10px;
+      }
+
+      .announcement-items span:nth-child(2) {
+        display: none;
+      }
+
+      .header-main {
+        min-height: 69px;
+      }
+
+      .desktop-nav,
+      .header-main > .button {
+        display: none;
+      }
+
+      .mobile-toggle {
+        display: inline-flex;
+      }
+
+      .category-links {
+        gap: 22px;
+        min-height: 40px;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        padding-top: 58px;
+        padding-bottom: 30px;
+        gap: 8px;
+      }
+
+      .hero-copy {
+        text-align: center;
+      }
+
+      .hero .eyebrow {
+        justify-content: center;
+      }
+
+      .hero h1 {
+        margin: 0 auto;
+        font-size: clamp(39px, 7vw, 52px);
+        letter-spacing: -1.9px;
+      }
+
+      .hero-description {
+        margin: 18px auto 0;
+        max-width: 550px;
+      }
+
+      .hero-benefits,
+      .hero-actions {
+        justify-content: center;
+      }
+
+      .hero-art {
+        min-height: 330px;
+        margin-top: 12px;
+        transform: scale(.91);
+      }
+
+      .section {
+        padding: 66px 0;
+      }
+
+      .section-heading {
+        margin-bottom: 32px;
+      }
+
+      .stats {
+        margin-top: 38px;
+        padding: 24px 0;
+      }
+
+      .stat {
+        padding: 4px 10px;
+      }
+
+      .stat strong {
+        font-size: 28px;
+      }
+
+      .stat span {
+        font-size: 10px;
+      }
+
+      .brand-logos {
+        gap: 19px 32px;
+      }
+
+      .brand-logo {
+        font-size: 16px;
+      }
+
+      .trust-strip {
+        gap: 13px 20px;
+      }
+
+      .steps-grid {
+        gap: 14px;
+      }
+
+      .step-card {
+        padding: 23px 18px;
+      }
+
+      .cta-band {
+        padding: 33px 27px;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .offer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .offer-card {
+        padding: 25px;
+      }
+
+      .contact-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-main {
+        grid-template-columns: 1fr 1fr;
+        gap: 35px 24px;
+        padding-top: 45px;
+        padding-bottom: 38px;
+      }
+
+      .footer-main > div:first-child {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (max-width: 520px) {
+      body {
+        font-size: 14px;
+      }
+
+      .container {
+        width: calc(100% - 32px);
+      }
+
+      .announcement-items {
+        gap: 6px 10px;
+      }
+
+      .announcement-items span {
+        font-size: 9px;
+      }
+
+      .announcement-items span:nth-child(3) {
+        display: none;
+      }
+
+      .brand-logo-image {
+        width: 45px;
+      }
+
+      .category-links {
+        gap: 20px;
+      }
+
+      .hero-grid {
+        padding-top: 45px;
+      }
+
+      .hero h1 {
+        font-size: 39px;
+      }
+
+      .hero-description {
+        font-size: 13px;
+      }
+
+      .hero-benefits {
+        gap: 10px 15px;
+      }
+
+      .hero-benefits span {
+        font-size: 10px;
+      }
+
+      .hero-actions {
+        gap: 10px;
+      }
+
+      .hero-actions .button {
+        padding: 0 15px;
+        min-height: 43px;
+        font-size: 12px;
+      }
+
+      .hero-art {
+        min-height: 290px;
+        transform: scale(.8);
+        margin: -4px -20px -10px;
+      }
+
+      .art-card-one {
+        right: -5px;
+      }
+
+      .art-card-two {
+        left: -5px;
+      }
+
+      .section {
+        padding: 54px 0;
+      }
+
+      .section-heading h2 {
+        font-size: 27px;
+      }
+
+      .section-heading p {
+        font-size: 12px;
+      }
+
+      .product-showcase {
+        padding: 4px;
+        border-radius: 14px;
+        box-shadow:
+          0 16px 35px rgba(25, 75, 158, .14),
+          0 5px 12px rgba(18, 39, 76, .08);
+      }
+
+      .product-showcase::before {
+        inset: 4px;
+        border-radius: 10px;
+      }
+
+      .product-showcase img {
+        border-radius: 10px;
+      }
+
+      .stats {
+        margin-top: 30px;
+      }
+
+      .stat {
+        padding: 4px 5px;
+      }
+
+      .stat strong {
+        font-size: 24px;
+      }
+
+      .stat span {
+        font-size: 9px;
+      }
+
+      .brand-logos {
+        gap: 16px 25px;
+      }
+
+      .brand-logo.apple {
+        font-size: 26px;
+      }
+
+      .brand-logo.google {
+        font-size: 18px;
+      }
+
+      .trust-strip {
+        justify-content: flex-start;
+        padding: 17px;
+      }
+
+      .steps-grid {
+        grid-template-columns: 1fr;
+        gap: 13px;
+      }
+
+      .step-card {
+        display: grid;
+        grid-template-columns: 45px 1fr;
+        column-gap: 15px;
+        padding: 21px;
+      }
+
+      .step-number {
+        grid-row: 1 / span 2;
+        margin: 0;
+      }
+
+      .step-card h3 {
+        align-self: end;
+        margin-bottom: 4px;
+      }
+
+      .step-card p {
+        grid-column: 2;
+      }
+
+      .cta-band {
+        padding: 28px 22px;
+      }
+
+      .cta-band h2 {
+        font-size: 24px;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr;
+        gap: 13px;
+      }
+
+      .feature-card {
+        padding: 21px;
+      }
+
+      .feature-icon {
+        margin-bottom: 12px;
+      }
+
+      .offer-card {
+        padding: 23px 20px;
+      }
+
+      .testimonial {
+        padding: 28px 23px;
+      }
+
+      .testimonial blockquote {
+        font-size: 13px;
+      }
+
+      .contact-info-card {
+        padding: 23px 18px;
+      }
+
+      .contact-image-card {
+        padding: 4px;
+        border-radius: 12px;
+      }
+
+      .contact-image-card::after {
+        inset: 4px;
+        border-radius: 8px;
+      }
+
+      .contact-image-card img {
+        border-radius: 8px;
+      }
+
+      .footer-main {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px 17px;
+      }
+
+      .footer-column h4 {
+        margin-bottom: 13px;
+      }
+
+      .footer-bottom-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+
+      .legal-links {
+        gap: 16px;
+      }
+
+      .back-to-top {
+        right: 14px;
+        bottom: 14px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="announcement">
+    <div class="container announcement-inner">
+      <div class="announcement-items">
+        <span><span class="mini-icon">✓</span> EU VAT Ready</span>
+        <span><span class="mini-icon">↗</span> Fast &amp; Secure Shipping</span>
+        <span><span class="mini-icon">✉</span> Dedicated Support <a href="mailto:arbeeltrading@yahoo-com">arbeeltrading@yahoo-com</a></span>
+      </div>
+      <button class="language" type="button" aria-label="Language: English">EN⌄</button>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container header-main">
+      <a class="brand" href="#home" aria-label="Arbeel homepage">
+        <img class="brand-logo-image" src="logo.jpg" width="300" height="300" alt="Arbeel">
+      </a>
+
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="#categories">Products</a>
+        <a href="#brands">Brands</a>
+        <a href="#offer">Stocklist</a>
+        <a href="#how-it-works">Shipping</a>
+        <a href="#why-us">About Us</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a href="#contact" class="button button-primary">
+        Request Stocklist
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M5 12h14M12 5l7 7-7 7"></path>
+        </svg>
+      </a>
+
+      <button class="mobile-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-nav">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+      <a href="#categories">Products</a>
+      <a href="#brands">Brands</a>
+      <a href="#offer">Stocklist</a>
+      <a href="#how-it-works">Shipping</a>
+      <a href="#why-us">About Us</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact" class="button button-primary">Request Stocklist →</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-dot"></span> Wholesale Smartphones &amp; Accessories</div>
+          <h1>Europe's Trusted <span>B2B Smartphone Supplier</span></h1>
+          <p class="hero-description">
+            We supply a wide range of smartphones, accessories and electronics to businesses across Europe with the best prices, reliable stock and fast shipping.
+          </p>
+
+          <div class="hero-benefits">
+            <span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"></path></svg>
+              Daily Updated Stock
+            </span>
+            <span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"></path></svg>
+              Competitive Prices
+            </span>
+            <span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"></path></svg>
+              EU VAT Ready
+            </span>
+            <span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"></path></svg>
+              Fast DHL / UPS Shipping
+            </span>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#offer" class="button button-primary">
+              View Stocklist
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+            </a>
+            <a href="#contact" class="button button-outline">Contact Sales</a>
+          </div>
+        </div>
+
+        <div class="hero-art" aria-label="Smartphone product illustration">
+          <div class="art-orbit"></div>
+          <div class="device-back" aria-hidden="true">
+            <div class="camera-module">
+              <span class="camera"></span>
+              <span class="camera"></span>
+              <span class="camera"></span>
+              <span class="camera-flash"></span>
+            </div>
+          </div>
+          <div class="device" aria-hidden="true">
+            <div class="device-screen">
+              <div class="device-island"></div>
+            </div>
+          </div>
+
+          <div class="art-card art-card-one">
+            <span class="art-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4.5 6v5.5c0 4.5 3.2 7.6 7.5 9.5 4.3-1.9 7.5-5 7.5-9.5V6L12 3Z"></path><path d="m9 12 2 2 4-4"></path></svg>
+            </span>
+            <span><strong>100% Genuine</strong><small>Quality guaranteed</small></span>
+          </div>
+
+          <div class="art-card art-card-two">
+            <span class="art-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h11v11H3zM14 11h4l3 4v3h-7z"></path><circle cx="7.5" cy="19" r="2"></circle><circle cx="17.5" cy="19" r="2"></circle><path d="M6 10h5M6 13h3"></path></svg>
+            </span>
+            <span><strong>Fast EU Shipping</strong><small>DHL &amp; UPS delivery</small></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="categories">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-kicker">Our Selection</div>
+          <h2>Our Product Categories</h2>
+          <p>Discover our growing range of smartphones, accessories and electronics for your business.</p>
+        </div>
+
+        <figure class="product-showcase">
+          <img
+            src="products.png"
+            width="1536"
+            height="1024"
+            loading="lazy"
+            decoding="async"
+            alt="Featured smartphones, tablets, laptops, wearables and accessories"
+          >
+        </figure>
+
+        <div class="stats">
+          <div class="stat">
+            <strong>15+</strong>
+            <span>Countries</span>
+          </div>
+          <div class="stat">
+            <strong>300+</strong>
+            <span>Business Customers</span>
+          </div>
+          <div class="stat">
+            <strong>10.000+</strong>
+            <span>Devices Delivered</span>
+          </div>
+        </div>
+
+        <div class="trusted" id="brands">
+          <p class="trusted-label">Trusted by Leading Brands</p>
+          <div class="brand-logos" aria-label="Supported brands">
+            <span class="brand-logo apple" aria-label="Apple">●</span>
+            <span class="brand-logo samsung">SAMSUNG</span>
+            <span class="brand-logo google">Google</span>
+            <span class="brand-logo xiaomi">mi Xiaomi</span>
+            <span class="brand-logo">PIXEL</span>
+          </div>
+          <div style="margin-top:24px">
+            <a href="#contact" class="button button-primary">View all brands →</a>
+          </div>
+        </div>
+
+        <div class="trust-strip">
+          <span class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 8 4v5c0 5-3.5 7.5-8 9-4.5-1.5-8-4-8-9V7l8-4Z"></path><path d="m9 12 2 2 4-4"></path></svg>
+            100% Genuine Products
+          </span>
+          <span class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 10h18"></path></svg>
+            Secure Payments
+          </span>
+          <span class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4z"></path><path d="m8 12 3 3 5-6"></path></svg>
+            EU VAT Compliant
+          </span>
+          <span class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8v.5Z"></path></svg>
+            Dedicated Support
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="how-it-works">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-kicker">Getting Started</div>
+          <h2>How It Works</h2>
+          <p>Simple steps to start doing business with us.</p>
+        </div>
+
+        <div class="steps-grid">
+          <article class="step-card">
+            <div class="step-number">1</div>
+            <h3>Request Stocklist</h3>
+            <p>Fill out the form and receive our latest stocklist.</p>
+          </article>
+          <article class="step-card">
+            <div class="step-number">2</div>
+            <h3>Receive Quote</h3>
+            <p>Get competitive prices within minutes.</p>
+          </article>
+          <article class="step-card">
+            <div class="step-number">3</div>
+            <h3>Fast Delivery</h3>
+            <p>We ship your order quickly and securely.</p>
+          </article>
+        </div>
+
+        <div style="margin-top:58px">
+          <div class="cta-band">
+            <div class="cta-content">
+              <h2>Ready to Grow Your Business?</h2>
+              <p>Request today's stocklist and receive competitive wholesale prices within minutes.</p>
+            </div>
+            <a href="#contact" class="button button-light">
+              Request Stocklist
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="why-us">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-kicker">The Difference</div>
+          <h2>Why Choose ThePhoneHub?</h2>
+          <p>We are committed to providing the best service and value to our business partners.</p>
+        </div>
+
+        <div class="features-grid">
+          <article class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19V5M4 19h17"></path><path d="m7 15 4-5 3 2 6-7"></path><path d="M15 5h5v5"></path></svg>
+            </div>
+            <h3>Reliable Stock</h3>
+            <p>We update our stocklist daily so you always get the latest availability.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+            </div>
+            <h3>Competitive Prices</h3>
+            <p>Benefit from the most competitive wholesale prices in the market.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="m16 11 2 2 4-4"></path></svg>
+            </div>
+            <h3>Trusted Partner</h3>
+            <p>Hundreds of businesses across Europe trust and grow with us.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h11v11H3zM14 11h4l3 4v3h-7z"></path><circle cx="7.5" cy="19" r="2"></circle><circle cx="17.5" cy="19" r="2"></circle></svg>
+            </div>
+            <h3>Fast &amp; Secure Delivery</h3>
+            <p>We ship orders quickly and safely with our trusted logistics partners.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="offer">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-kicker">Built for Business</div>
+          <h2>The ThePhoneHub Offer</h2>
+        </div>
+        <p class="offer-intro">
+          Plug our live wholesale catalogue straight into your business — connect the way that fits how you already work.
+        </p>
+
+        <div class="offer-grid">
+          <article class="offer-card featured">
+            <div class="offer-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4z"></path><path d="M8 8h8M8 12h8M8 16h4"></path></svg>
+            </div>
+            <h3>CSV Live Link</h3>
+            <p>One always-on feed URL with real-time stock, per-unit pricing and MOQs. Point your ERP, marketplace tool or spreadsheet at it and it refreshes automatically — no manual uploads.</p>
+            <div class="feed-code">
+              <span class="live-label">LIVE</span>
+              <code class="feed-url" id="feed-url">https://feed.thephonehub.eu/stocklist.csv</code>
+            </div>
+            <button type="button" class="copy-button" id="copy-feed">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="13" height="13" rx="2"></rect><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"></path></svg>
+              <span>Copy feed URL</span>
+            </button>
+            <a href="#contact" class="button button-primary">Request Stocklist →</a>
+          </article>
+
+          <article class="offer-card">
+            <div class="offer-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 9-3 3 3 3M16 9l3 3-3 3M14 5l-4 14"></path></svg>
+            </div>
+            <h3>API Connection</h3>
+            <p>A REST API for live availability, pricing and order placement, with webhooks that push stock and price changes to you in real time. Automate ordering straight from your own systems.</p>
+            <code class="api-code"><span>REST</span> GET /v1/stock · POST /v1/orders</code>
+            <a href="#contact" class="button button-primary">Request API access →</a>
+          </article>
+
+          <article class="offer-card">
+            <div class="offer-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h11v11H3zM14 11h4l3 4v3h-7z"></path><circle cx="7.5" cy="19" r="2"></circle><circle cx="17.5" cy="19" r="2"></circle><path d="M7 10h4"></path></svg>
+            </div>
+            <h3>Dropshipping</h3>
+            <p>We pick, pack and ship directly to your customers under your brand — no stock to hold and no warehousing on your side.</p>
+            <ul class="offer-list">
+              <li>Blind / neutral packaging</li>
+              <li>Tracked DHL &amp; UPS across Europe</li>
+              <li>Orders pushed via CSV or API</li>
+            </ul>
+            <a href="#contact" class="button button-primary">Start dropshipping →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="testimonials">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-kicker">Client Feedback</div>
+          <h2>What Our Partners Say</h2>
+          <p>Long-term partnerships built on reliable stock, competitive pricing and excellent service.</p>
+        </div>
+
+        <div class="testimonial-wrap">
+          <article class="testimonial">
+            <div class="quote-mark" aria-hidden="true">“</div>
+            <blockquote>
+              ThePhoneHub is one of our most reliable suppliers. Great prices, fast delivery and excellent support. Their daily stocklist keeps our shelves full and our margins healthy.
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="avatar">MC</div>
+              <div>
+                <strong>MobileCity</strong>
+                <span>Retail Partner · Germany</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-kicker">Let's Work Together</div>
+          <h2>Get in Touch</h2>
+          <p>Tell us what you need — stocklist, CSV feed, API access or dropshipping — and our sales team replies within one working day.</p>
+        </div>
+
+        <div class="contact-layout">
+          <figure class="contact-image-card">
+            <img
+              src="IRBIL.png"
+              width="1448"
+              height="1086"
+              loading="lazy"
+              decoding="async"
+              alt="Arbeel Trading office in Irbil"
+            >
+          </figure>
+
+          <aside class="contact-info-card">
+            <h3>Get in touch</h3>
+            <p>Have a question or need more information? Our team is here to help your business grow.</p>
+
+            <div class="contact-details">
+              <div class="contact-detail">
+                <span class="detail-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 10h1M14 10h1M9 14h1M14 14h1M10 21v-3h4v3"></path></svg>
+                </span>
+                <div>
+                  <p>M23 werba center al muraqqabat Deira Dubai</p>
+                </div>
+              </div>
+
+              <div class="contact-detail">
+                <span class="detail-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.63a2 2 0 0 1-.45 2.11L8 9.73a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.85.29 1.73.5 2.63.62A2 2 0 0 1 22 16.92Z"></path></svg>
+                </span>
+                <div>
+                  <p>Tel : <a href="tel:+97142720631">+971 4 2720631</a>, Fax: +971 4 2720974, P. O. Box: 251049. Duba</p>
+                </div>
+              </div>
+
+              <div class="contact-detail">
+                <span class="detail-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>
+                </span>
+                <div>
+                  <p>Deira - Dubai - United Arab Emirates</p>
+                </div>
+              </div>
+
+              <div class="contact-detail">
+                <span class="detail-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>
+                </span>
+                <div>
+                  <p>E-mail: <a href="mailto:arbeeltrading@yahoo-com">arbeeltrading@yahoo-com</a></p>
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top:23px;padding-top:20px;border-top:1px solid #e8edf4">
+              <span style="font-size:11px;color:#667085">Prefer email?</span>
+              <a href="mailto:arbeeltrading@yahoo-com" style="display:block;color:#2463eb;font-size:13px;font-weight:750;margin-top:5px">arbeeltrading@yahoo-com</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-main">
+      <div>
+        <a class="brand" href="#home" aria-label="Arbeel homepage">
+          <img class="brand-logo-image" src="logo.jpg" width="300" height="253" loading="lazy" decoding="async" alt="Arbeel">
+        </a>
+        <p class="footer-description">
+          Your trusted B2B partner for smartphones, accessories, electronics and gaming products across Europe.
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#categories">Products</a></li>
+          <li><a href="#brands">Brands</a></li>
+          <li><a href="#offer">Stocklist</a></li>
+          <li><a href="#how-it-works">Shipping</a></li>
+          <li><a href="#why-us">About Us</a></li>
+          <li><a href="#contact">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Categories</h4>
+        <ul class="footer-links">
+          <li><a href="#categories">iPhones</a></li>
+          <li><a href="#categories">Samsung</a></li>
+          <li><a href="#categories">Xiaomi</a></li>
+          <li><a href="#categories">Google Pixel</a></li>
+          <li><a href="#categories">Accessories</a></li>
+          <li><a href="#categories">PlayStation</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Contact Us</h4>
+        <ul class="footer-links footer-contact">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 10h1M14 10h1M9 14h1M14 14h1M10 21v-3h4v3"></path></svg>
+            <span>M23 werba center al muraqqabat Deira Dubai</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.63a2 2 0 0 1-.45 2.11L8 9.73a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.85.29 1.73.5 2.63.62A2 2 0 0 1 22 16.92Z"></path></svg>
+            <span>Tel : <a href="tel:+97142720631">+971 4 2720631</a>, Fax: +971 4 2720974, P. O. Box: 251049. Duba</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>
+            <span>Deira - Dubai - United Arab Emirates</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>
+            <span>E-mail: <a href="mailto:arbeeltrading@yahoo-com">arbeeltrading@yahoo-com</a></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>© 2026 ThePhoneHub. All rights reserved.</p>
+        <div class="legal-links">
+          <a href="#privacy" id="privacy-link">Privacy Policy</a>
+          <a href="#terms" id="terms-link">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 15-6-6-6 6"></path></svg>
+  </button>
+
+  <script>
+    (() => {
+      "use strict";
+
+      const menuButton = document.querySelector(".mobile-toggle");
+      const mobileNav = document.querySelector("#mobile-nav");
+
+      menuButton.addEventListener("click", () => {
+        const isOpen = mobileNav.classList.toggle("open");
+        menuButton.setAttribute("aria-expanded", String(isOpen));
+        menuButton.setAttribute(
+          "aria-label",
+          isOpen ? "Close navigation" : "Open navigation"
+        );
+      });
+
+      mobileNav.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+          mobileNav.classList.remove("open");
+          menuButton.setAttribute("aria-expanded", "false");
+          menuButton.setAttribute("aria-label", "Open navigation");
+        });
+      });
+
+      const copyButton = document.querySelector("#copy-feed");
+      const feedUrl = document.querySelector("#feed-url");
+
+      copyButton.addEventListener("click", async () => {
+        const url = feedUrl.textContent.trim();
+        const label = copyButton.querySelector("span");
+
+        try {
+          if (navigator.clipboard && window.isSecureContext) {
+            await navigator.clipboard.writeText(url);
+          } else {
+            const textarea = document.createElement("textarea");
+            textarea.value = url;
+            textarea.style.position = "fixed";
+            textarea.style.opacity = "0";
+            document.body.appendChild(textarea);
+            textarea.select();
+
+            const copied = document.execCommand("copy");
+            textarea.remove();
+
+            if (!copied) throw new Error("Copy unavailable");
+          }
+
+          label.textContent = "Copied!";
+        } catch {
+          label.textContent = "Select URL to copy";
+          const range = document.createRange();
+          range.selectNodeContents(feedUrl);
+          const selection = window.getSelection();
+          selection.removeAllRanges();
+          selection.addRange(range);
+        }
+
+        window.setTimeout(() => {
+          label.textContent = "Copy feed URL";
+        }, 2200);
+      });
+
+      const backToTop = document.querySelector("#back-to-top");
+
+      window.addEventListener("scroll", () => {
+        backToTop.classList.toggle("visible", window.scrollY > 500);
+      }, { passive: true });
+
+      backToTop.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+
+      document.querySelectorAll('a[href="#privacy"], a[href="#terms"]').forEach(link => {
+        link.addEventListener("click", event => {
+          event.preventDefault();
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
