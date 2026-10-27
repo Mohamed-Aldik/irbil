@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#101827">
-  <meta name="description" content="ThePhoneHub — Europe's trusted B2B smartphone supplier. Wholesale smartphones, accessories and electronics with competitive prices and fast EU shipping.">
-  <title>ThePhoneHub — Europe's Trusted B2B Smartphone Supplier</title>
+  <meta name="description" content="Arbeel Trading FZE — IRAQ's trusted B2B smartphone supplier. Wholesale smartphones, accessories and electronics with competitive prices and fast IRAQ shipping.">
+  <title>Arbeel Trading FZE — IRAQ's Trusted B2B Smartphone Supplier</title>
   <style>
     :root {
       --primary: #2463eb;
@@ -104,11 +104,21 @@
 
     .language {
       color: #fff;
-      background: transparent;
-      border: 0;
+      background: #ffffff12;
+      border: 1px solid #ffffff2a;
+      border-radius: 999px;
       font-size: 12px;
-      font-weight: 600;
-      padding: 5px;
+      font-weight: 750;
+      min-width: 72px;
+      padding: 5px 12px;
+      transition: background .2s, border-color .2s;
+    }
+
+    .language:hover,
+    .language:focus-visible {
+      background: #ffffff20;
+      border-color: #ffffff55;
+      outline: none;
     }
 
     .header {
@@ -914,163 +924,37 @@
       line-height: 1.85;
     }
 
-    .offer-intro {
-      max-width: 750px;
-      margin: -22px auto 38px;
-      color: var(--muted);
-      text-align: center;
-      font-size: 13px;
-      line-height: 1.9;
-    }
-
-    .offer-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-      align-items: stretch;
-    }
-
-    .offer-card {
-      display: flex;
-      flex-direction: column;
-      padding: 27px 24px;
-      border: 1px solid var(--border);
-      border-radius: 13px;
-      background: #fff;
-      box-shadow: 0 4px 16px #162c5005;
-    }
-
-    .offer-card.featured {
-      border-color: #9bbaff;
-      box-shadow: 0 10px 35px #2463eb10;
-    }
-
-    .offer-icon {
-      display: grid;
-      place-items: center;
-      width: 48px;
-      height: 48px;
-      margin-bottom: 19px;
-      border-radius: 12px;
-      background: #edf3ff;
-      color: var(--primary);
-    }
-
-    .offer-icon svg {
-      width: 24px;
-      height: 24px;
-    }
-
-    .offer-card h3 {
-      font-size: 18px;
-      letter-spacing: -.4px;
-      margin-bottom: 10px;
-    }
-
-    .offer-card > p {
-      color: var(--muted);
-      font-size: 12px;
-      line-height: 1.9;
-      margin-bottom: 19px;
-    }
-
-    .feed-code {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 7px;
-      padding: 12px;
-      border: 1px solid #dce5f3;
-      border-radius: 8px;
-      background: #f7f9fd;
-      margin-bottom: 17px;
-    }
-
-    .live-label {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      color: #15815b;
-      font-size: 9px;
-      font-weight: 850;
-      letter-spacing: .5px;
-    }
-
-    .live-label::before {
-      content: "";
-      width: 6px;
-      height: 6px;
-      background: #20b67a;
-      border-radius: 50%;
-    }
-
-    .feed-url {
-      width: 100%;
-      overflow-wrap: anywhere;
-      color: #47546b;
-      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-      font-size: 10px;
-    }
-
-    .copy-button {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      width: fit-content;
-      color: var(--primary);
-      border: 0;
-      background: transparent;
-      font-size: 11px;
-      font-weight: 750;
-      margin-bottom: 16px;
-    }
-
-    .copy-button svg {
-      width: 14px;
-      height: 14px;
-    }
-
-    .api-code {
-      display: block;
-      padding: 12px;
-      border: 1px solid #dce5f3;
-      border-radius: 8px;
-      background: #f7f9fd;
-      color: #47546b;
-      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-      font-size: 10px;
-      margin-bottom: 17px;
-    }
-
-    .api-code span {
-      color: #16835e;
-      font-weight: 800;
-    }
-
-    .offer-card .button {
-      width: 100%;
-      margin-top: auto;
-    }
-
-    .offer-list {
-      list-style: none;
-      margin: -2px 0 20px;
-    }
-
-    .offer-list li {
+    .offer-image-card {
       position: relative;
-      padding-left: 21px;
-      color: #475467;
-      font-size: 11px;
-      margin: 8px 0;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 7px;
+      overflow: hidden;
+      border: 1px solid #b8cce9;
+      border-radius: 20px;
+      background: linear-gradient(145deg, #fff, #eaf2fc);
+      box-shadow:
+        0 24px 60px rgba(24, 55, 102, .16),
+        0 7px 18px rgba(18, 39, 76, .08);
     }
 
-    .offer-list li::before {
-      content: "✓";
+    .offer-image-card::after {
+      content: "";
       position: absolute;
-      left: 0;
-      color: #159b69;
-      font-weight: 800;
+      inset: 7px;
+      pointer-events: none;
+      border: 1px solid rgba(255, 255, 255, .66);
+      border-radius: 13px;
+      box-shadow: inset 0 0 34px rgba(8, 53, 113, .09);
+    }
+
+    .offer-image-card img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 3 / 2;
+      object-fit: cover;
+      border-radius: 13px;
     }
 
     .testimonial-wrap {
@@ -1588,12 +1472,21 @@
         gap: 20px;
       }
 
-      .offer-grid {
-        grid-template-columns: 1fr;
+      .offer-image-card {
+        padding: 4px;
+        border-radius: 13px;
+        box-shadow:
+          0 16px 34px rgba(24, 55, 102, .14),
+          0 5px 12px rgba(18, 39, 76, .07);
       }
 
-      .offer-card {
-        padding: 25px;
+      .offer-image-card::after {
+        inset: 4px;
+        border-radius: 9px;
+      }
+
+      .offer-image-card img {
+        border-radius: 9px;
       }
 
       .contact-layout {
@@ -1794,10 +1687,6 @@
         margin-bottom: 12px;
       }
 
-      .offer-card {
-        padding: 23px 20px;
-      }
-
       .testimonial {
         padding: 28px 23px;
       }
@@ -1849,6 +1738,50 @@
       }
     }
 
+    .ltr-content,
+    a[href^="mailto:"],
+    a[href^="tel:"] {
+      direction: ltr;
+      unicode-bidi: isolate;
+      text-align: left;
+    }
+
+    html[dir="rtl"] body {
+      font-family: Tahoma, Arial, "Segoe UI", sans-serif;
+    }
+
+    html[dir="rtl"] .hero h1,
+    html[dir="rtl"] .section-heading h2,
+    html[dir="rtl"] .contact-info-card h3 {
+      letter-spacing: 0;
+    }
+
+    html[dir="rtl"] .hero::before {
+      right: auto;
+      left: -80px;
+    }
+
+    html[dir="rtl"] .button svg {
+      transform: scaleX(-1);
+    }
+
+    html[dir="rtl"] .quote-mark {
+      right: 25px;
+      left: auto;
+    }
+
+    html[dir="rtl"] .back-to-top {
+      right: auto;
+      left: 22px;
+    }
+
+    @media (max-width: 520px) {
+      html[dir="rtl"] .back-to-top {
+        right: auto;
+        left: 14px;
+      }
+    }
+
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after {
         scroll-behavior: auto !important;
@@ -1863,11 +1796,11 @@
   <div class="announcement">
     <div class="container announcement-inner">
       <div class="announcement-items">
-        <span><span class="mini-icon">✓</span> EU VAT Ready</span>
+        <span><span class="mini-icon">✓</span> IRAQ VAT Ready</span>
         <span><span class="mini-icon">↗</span> Fast &amp; Secure Shipping</span>
         <span><span class="mini-icon">✉</span> Dedicated Support <a href="mailto:arbeeltrading@yahoo-com">arbeeltrading@yahoo-com</a></span>
       </div>
-      <button class="language" type="button" aria-label="Language: English">EN⌄</button>
+      <button class="language" type="button" aria-label="Change language to Arabic">العربية</button>
     </div>
   </div>
 
@@ -1916,9 +1849,9 @@
       <div class="container hero-grid">
         <div class="hero-copy">
           <div class="eyebrow"><span class="eyebrow-dot"></span> Wholesale Smartphones &amp; Accessories</div>
-          <h1>Europe's Trusted <span>B2B Smartphone Supplier</span></h1>
+          <h1>IRAQ's Trusted <span>B2B Smartphone Supplier</span></h1>
           <p class="hero-description">
-            We supply a wide range of smartphones, accessories and electronics to businesses across Europe with the best prices, reliable stock and fast shipping.
+            We supply a wide range of smartphones, accessories and electronics to businesses across IRAQ with the best prices, reliable stock and fast shipping.
           </p>
 
           <div class="hero-benefits">
@@ -1932,7 +1865,7 @@
             </span>
             <span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"></path></svg>
-              EU VAT Ready
+              IRAQ VAT Ready
             </span>
             <span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"></path></svg>
@@ -1976,7 +1909,7 @@
             <span class="art-card-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h11v11H3zM14 11h4l3 4v3h-7z"></path><circle cx="7.5" cy="19" r="2"></circle><circle cx="17.5" cy="19" r="2"></circle><path d="M6 10h5M6 13h3"></path></svg>
             </span>
-            <span><strong>Fast EU Shipping</strong><small>DHL &amp; UPS delivery</small></span>
+            <span><strong>Fast IRAQ Shipping</strong><small>DHL &amp; UPS delivery</small></span>
           </div>
         </div>
       </div>
@@ -2001,30 +1934,9 @@
           >
         </figure>
 
-        <div class="stats">
-          <div class="stat">
-            <strong>15+</strong>
-            <span>Countries</span>
-          </div>
-          <div class="stat">
-            <strong>300+</strong>
-            <span>Business Customers</span>
-          </div>
-          <div class="stat">
-            <strong>10.000+</strong>
-            <span>Devices Delivered</span>
-          </div>
-        </div>
-
         <div class="trusted" id="brands">
           <p class="trusted-label">Trusted by Leading Brands</p>
-          <div class="brand-logos" aria-label="Supported brands">
-            <span class="brand-logo apple" aria-label="Apple">●</span>
-            <span class="brand-logo samsung">SAMSUNG</span>
-            <span class="brand-logo google">Google</span>
-            <span class="brand-logo xiaomi">mi Xiaomi</span>
-            <span class="brand-logo">PIXEL</span>
-          </div>
+
           <div style="margin-top:24px">
             <a href="#contact" class="button button-primary">View all brands →</a>
           </div>
@@ -2041,7 +1953,7 @@
           </span>
           <span class="trust-item">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4z"></path><path d="m8 12 3 3 5-6"></path></svg>
-            EU VAT Compliant
+            IRAQ VAT Compliant
           </span>
           <span class="trust-item">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8v.5Z"></path></svg>
@@ -2096,7 +2008,7 @@
       <div class="container">
         <div class="section-heading">
           <div class="section-kicker">The Difference</div>
-          <h2>Why Choose ThePhoneHub?</h2>
+          <h2>Why Choose Arbeel Trading FZE?</h2>
           <p>We are committed to providing the best service and value to our business partners.</p>
         </div>
 
@@ -2122,7 +2034,7 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="m16 11 2 2 4-4"></path></svg>
             </div>
             <h3>Trusted Partner</h3>
-            <p>Hundreds of businesses across Europe trust and grow with us.</p>
+            <p>Hundreds of businesses across IRAQ trust and grow with us.</p>
           </article>
 
           <article class="feature-card">
@@ -2138,56 +2050,16 @@
 
     <section class="section section-soft" id="offer">
       <div class="container">
-        <div class="section-heading">
-          <div class="section-kicker">Built for Business</div>
-          <h2>The ThePhoneHub Offer</h2>
-        </div>
-        <p class="offer-intro">
-          Plug our live wholesale catalogue straight into your business — connect the way that fits how you already work.
-        </p>
-
-        <div class="offer-grid">
-          <article class="offer-card featured">
-            <div class="offer-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4z"></path><path d="M8 8h8M8 12h8M8 16h4"></path></svg>
-            </div>
-            <h3>CSV Live Link</h3>
-            <p>One always-on feed URL with real-time stock, per-unit pricing and MOQs. Point your ERP, marketplace tool or spreadsheet at it and it refreshes automatically — no manual uploads.</p>
-            <div class="feed-code">
-              <span class="live-label">LIVE</span>
-              <code class="feed-url" id="feed-url">https://feed.thephonehub.eu/stocklist.csv</code>
-            </div>
-            <button type="button" class="copy-button" id="copy-feed">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="13" height="13" rx="2"></rect><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"></path></svg>
-              <span>Copy feed URL</span>
-            </button>
-            <a href="#contact" class="button button-primary">Request Stocklist →</a>
-          </article>
-
-          <article class="offer-card">
-            <div class="offer-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 9-3 3 3 3M16 9l3 3-3 3M14 5l-4 14"></path></svg>
-            </div>
-            <h3>API Connection</h3>
-            <p>A REST API for live availability, pricing and order placement, with webhooks that push stock and price changes to you in real time. Automate ordering straight from your own systems.</p>
-            <code class="api-code"><span>REST</span> GET /v1/stock · POST /v1/orders</code>
-            <a href="#contact" class="button button-primary">Request API access →</a>
-          </article>
-
-          <article class="offer-card">
-            <div class="offer-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h11v11H3zM14 11h4l3 4v3h-7z"></path><circle cx="7.5" cy="19" r="2"></circle><circle cx="17.5" cy="19" r="2"></circle><path d="M7 10h4"></path></svg>
-            </div>
-            <h3>Dropshipping</h3>
-            <p>We pick, pack and ship directly to your customers under your brand — no stock to hold and no warehousing on your side.</p>
-            <ul class="offer-list">
-              <li>Blind / neutral packaging</li>
-              <li>Tracked DHL &amp; UPS across Europe</li>
-              <li>Orders pushed via CSV or API</li>
-            </ul>
-            <a href="#contact" class="button button-primary">Start dropshipping →</a>
-          </article>
-        </div>
+        <figure class="offer-image-card">
+          <img
+            src="log.jpg"
+            width="1536"
+            height="1024"
+            loading="lazy"
+            decoding="async"
+            alt="Arbeel Trading electronics promotion for Dubai and Erbil, Iraq"
+          >
+        </figure>
       </div>
     </section>
 
@@ -2203,15 +2075,8 @@
           <article class="testimonial">
             <div class="quote-mark" aria-hidden="true">“</div>
             <blockquote>
-              ThePhoneHub is one of our most reliable suppliers. Great prices, fast delivery and excellent support. Their daily stocklist keeps our shelves full and our margins healthy.
+              Arbeel Trading FZE is one of our most reliable suppliers. Great prices, fast delivery and excellent support. Their daily stocklist keeps our shelves full and our margins healthy.
             </blockquote>
-            <div class="testimonial-author">
-              <div class="avatar">MC</div>
-              <div>
-                <strong>MobileCity</strong>
-                <span>Retail Partner · Germany</span>
-              </div>
-            </div>
           </article>
         </div>
       </div>
@@ -2247,7 +2112,7 @@
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 10h1M14 10h1M9 14h1M14 14h1M10 21v-3h4v3"></path></svg>
                 </span>
                 <div>
-                  <p>M23 werba center al muraqqabat Deira Dubai</p>
+                  <p class="ltr-content">M23 werba center al muraqqabat Deira Dubai</p>
                 </div>
               </div>
 
@@ -2256,7 +2121,7 @@
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.63a2 2 0 0 1-.45 2.11L8 9.73a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.85.29 1.73.5 2.63.62A2 2 0 0 1 22 16.92Z"></path></svg>
                 </span>
                 <div>
-                  <p>Tel : <a href="tel:+97142720631">+971 4 2720631</a>, Fax: +971 4 2720974, P. O. Box: 251049. Duba</p>
+                  <p class="ltr-content">Tel : <a href="tel:+97142720631">+971 4 2720631</a>, Fax: +971 4 2720974, P. O. Box: 251049. Duba</p>
                 </div>
               </div>
 
@@ -2265,7 +2130,7 @@
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>
                 </span>
                 <div>
-                  <p>Deira - Dubai - United Arab Emirates</p>
+                  <p class="ltr-content">Deira - Dubai - United Arab Emirates</p>
                 </div>
               </div>
 
@@ -2274,7 +2139,7 @@
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>
                 </span>
                 <div>
-                  <p>E-mail: <a href="mailto:arbeeltrading@yahoo-com">arbeeltrading@yahoo-com</a></p>
+                  <p class="ltr-content">E-mail: <a href="mailto:arbeeltrading@yahoo-com">arbeeltrading@yahoo-com</a></p>
                 </div>
               </div>
             </div>
@@ -2296,7 +2161,7 @@
           <img class="brand-logo-image" src="logo.jpg" width="300" height="253" loading="lazy" decoding="async" alt="Arbeel">
         </a>
         <p class="footer-description">
-          Your trusted B2B partner for smartphones, accessories, electronics and gaming products across Europe.
+          Your trusted B2B partner for smartphones, accessories, electronics and gaming products across IRAQ.
         </p>
       </div>
 
@@ -2330,19 +2195,19 @@
         <ul class="footer-links footer-contact">
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 10h1M14 10h1M9 14h1M14 14h1M10 21v-3h4v3"></path></svg>
-            <span>M23 werba center al muraqqabat Deira Dubai</span>
+            <span class="ltr-content">M23 werba center al muraqqabat Deira Dubai</span>
           </li>
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.63a2 2 0 0 1-.45 2.11L8 9.73a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.85.29 1.73.5 2.63.62A2 2 0 0 1 22 16.92Z"></path></svg>
-            <span>Tel : <a href="tel:+97142720631">+971 4 2720631</a>, Fax: +971 4 2720974, P. O. Box: 251049. Duba</span>
+            <span class="ltr-content">Tel : <a href="tel:+97142720631">+971 4 2720631</a>, Fax: +971 4 2720974, P. O. Box: 251049. Duba</span>
           </li>
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>
-            <span>Deira - Dubai - United Arab Emirates</span>
+            <span class="ltr-content">Deira - Dubai - United Arab Emirates</span>
           </li>
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>
-            <span>E-mail: <a href="mailto:arbeeltrading@yahoo-com">arbeeltrading@yahoo-com</a></span>
+            <span class="ltr-content">E-mail: <a href="mailto:arbeeltrading@yahoo-com">arbeeltrading@yahoo-com</a></span>
           </li>
         </ul>
       </div>
@@ -2350,7 +2215,7 @@
 
     <div class="footer-bottom">
       <div class="container footer-bottom-inner">
-        <p>© 2026 ThePhoneHub. All rights reserved.</p>
+        <p>© 2026 Arbeel Trading FZE. All rights reserved.</p>
         <div class="legal-links">
           <a href="#privacy" id="privacy-link">Privacy Policy</a>
           <a href="#terms" id="terms-link">Terms &amp; Conditions</a>
@@ -2367,15 +2232,190 @@
     (() => {
       "use strict";
 
+      const languageButton = document.querySelector(".language");
       const menuButton = document.querySelector(".mobile-toggle");
       const mobileNav = document.querySelector("#mobile-nav");
+
+      const arabicText = Object.freeze({
+        "IRAQ VAT Ready": "جاهزون لضريبة القيمة المضافة في العراق",
+        "Fast & Secure Shipping": "شحن سريع وآمن",
+        "Dedicated Support": "دعم مخصص",
+        "Products": "المنتجات",
+        "Brands": "العلامات التجارية",
+        "Stocklist": "قائمة المخزون",
+        "Shipping": "الشحن",
+        "About Us": "من نحن",
+        "Contact": "اتصل بنا",
+        "Request Stocklist": "طلب قائمة المخزون",
+        "Request Stocklist →": "طلب قائمة المخزون ←",
+        "Wholesale Smartphones & Accessories": "تجارة الهواتف الذكية والإكسسوارات بالجملة",
+        "IRAQ's Trusted": "المورّد الموثوق في العراق",
+        "B2B Smartphone Supplier": "للهواتف الذكية بين الشركات",
+        "We supply a wide range of smartphones, accessories and electronics to businesses across IRAQ with the best prices, reliable stock and fast shipping.": "نوفّر مجموعة واسعة من الهواتف الذكية والإكسسوارات والإلكترونيات للشركات في جميع أنحاء العراق بأفضل الأسعار ومخزون موثوق وشحن سريع.",
+        "Daily Updated Stock": "مخزون محدّث يوميًا",
+        "Competitive Prices": "أسعار تنافسية",
+        "Fast DHL / UPS Shipping": "شحن سريع عبر DHL وUPS",
+        "View Stocklist": "عرض قائمة المخزون",
+        "Contact Sales": "تواصل مع المبيعات",
+        "100% Genuine": "منتجات أصلية 100%",
+        "Quality guaranteed": "جودة مضمونة",
+        "Fast IRAQ Shipping": "شحن سريع داخل العراق",
+        "DHL & UPS delivery": "توصيل عبر DHL وUPS",
+        "Our Selection": "تشكيلتنا",
+        "Our Product Categories": "فئات منتجاتنا",
+        "Discover our growing range of smartphones, accessories and electronics for your business.": "اكتشف مجموعتنا المتنامية من الهواتف الذكية والإكسسوارات والإلكترونيات لنشاطك التجاري.",
+        "Trusted by Leading Brands": "موثوقون لدى العلامات التجارية الرائدة",
+        "View all brands →": "عرض جميع العلامات التجارية ←",
+        "100% Genuine Products": "منتجات أصلية 100%",
+        "Secure Payments": "مدفوعات آمنة",
+        "IRAQ VAT Compliant": "متوافقون مع ضريبة القيمة المضافة العراقية",
+        "Getting Started": "ابدأ معنا",
+        "How It Works": "كيف نعمل",
+        "Simple steps to start doing business with us.": "خطوات بسيطة لبدء التعامل التجاري معنا.",
+        "Fill out the form and receive our latest stocklist.": "تواصل معنا لتحصل على أحدث قائمة للمخزون.",
+        "Receive Quote": "استلم عرض السعر",
+        "Get competitive prices within minutes.": "احصل على أسعار تنافسية خلال دقائق.",
+        "Fast Delivery": "توصيل سريع",
+        "We ship your order quickly and securely.": "نشحن طلبك بسرعة وأمان.",
+        "Ready to Grow Your Business?": "هل أنت مستعد لتنمية أعمالك؟",
+        "Request today's stocklist and receive competitive wholesale prices within minutes.": "اطلب قائمة مخزون اليوم واحصل على أسعار جملة تنافسية خلال دقائق.",
+        "The Difference": "ما يميزنا",
+        "Why Choose Arbeel Trading FZE?": "لماذا تختار شركة أربيل للتجارة؟",
+        "We are committed to providing the best service and value to our business partners.": "نلتزم بتقديم أفضل خدمة وقيمة لشركائنا التجاريين.",
+        "Reliable Stock": "مخزون موثوق",
+        "We update our stocklist daily so you always get the latest availability.": "نحدّث قائمة المخزون يوميًا لتطّلع دائمًا على أحدث المنتجات المتوفرة.",
+        "Benefit from the most competitive wholesale prices in the market.": "استفد من أكثر أسعار الجملة تنافسية في السوق.",
+        "Trusted Partner": "شريك موثوق",
+        "Hundreds of businesses across IRAQ trust and grow with us.": "تثق بنا مئات الشركات في جميع أنحاء العراق وتنمو معنا.",
+        "Fast & Secure Delivery": "توصيل سريع وآمن",
+        "We ship orders quickly and safely with our trusted logistics partners.": "نشحن الطلبات بسرعة وأمان مع شركائنا الموثوقين في الخدمات اللوجستية.",
+        "Client Feedback": "آراء العملاء",
+        "What Our Partners Say": "ماذا يقول شركاؤنا",
+        "Long-term partnerships built on reliable stock, competitive pricing and excellent service.": "شراكات طويلة الأمد مبنية على مخزون موثوق وأسعار تنافسية وخدمة ممتازة.",
+        "Arbeel Trading FZE is one of our most reliable suppliers. Great prices, fast delivery and excellent support. Their daily stocklist keeps our shelves full and our margins healthy.": "شركة أربيل للتجارة من أكثر موردينا موثوقية. أسعار ممتازة وتوصيل سريع ودعم رائع. تساعدنا قائمة المخزون اليومية على إبقاء رفوفنا ممتلئة وهوامش أرباحنا جيدة.",
+        "Let's Work Together": "لنعمل معًا",
+        "Get in Touch": "تواصل معنا",
+        "Get in touch": "تواصل معنا",
+        "Tell us what you need — stocklist, CSV feed, API access or dropshipping — and our sales team replies within one working day.": "أخبرنا بما تحتاجه — قائمة مخزون أو تغذية CSV أو وصول API أو دروبشيبينغ — وسيرد فريق المبيعات خلال يوم عمل واحد.",
+        "Have a question or need more information? Our team is here to help your business grow.": "هل لديك سؤال أو تحتاج إلى مزيد من المعلومات؟ فريقنا هنا لمساعدة أعمالك على النمو.",
+        "Prefer email?": "تفضّل البريد الإلكتروني؟",
+        "Your trusted B2B partner for smartphones, accessories, electronics and gaming products across IRAQ.": "شريكك الموثوق للأعمال في الهواتف الذكية والإكسسوارات والإلكترونيات ومنتجات الألعاب في جميع أنحاء العراق.",
+        "Quick Links": "روابط سريعة",
+        "FAQ": "الأسئلة الشائعة",
+        "Categories": "الفئات",
+        "iPhones": "هواتف آيفون",
+        "Accessories": "الإكسسوارات",
+        "Contact Us": "اتصل بنا",
+        "© 2026 Arbeel Trading FZE. All rights reserved.": "© 2026 Arbeel Trading FZE. جميع الحقوق محفوظة.",
+        "Privacy Policy": "سياسة الخصوصية",
+        "Terms & Conditions": "الشروط والأحكام"
+      });
+
+      const originalText = new WeakMap();
+      const translatableNodes = [];
+      const textWalker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+        acceptNode(node) {
+          const parent = node.parentElement;
+          const key = node.nodeValue.trim();
+          if (!parent || parent.closest("script, style") || !arabicText[key]) {
+            return NodeFilter.FILTER_REJECT;
+          }
+          originalText.set(node, node.nodeValue);
+          return NodeFilter.FILTER_ACCEPT;
+        }
+      });
+
+      while (textWalker.nextNode()) translatableNodes.push(textWalker.currentNode);
+
+      const localizedAttributes = [
+        [".brand", "aria-label", "Arbeel homepage", "صفحة أربيل الرئيسية"],
+        [".desktop-nav", "aria-label", "Main navigation", "التنقل الرئيسي"],
+        ["#mobile-nav", "aria-label", "Mobile navigation", "التنقل عبر الهاتف"],
+        [".hero-art", "aria-label", "Smartphone product illustration", "رسم توضيحي لهاتف ذكي"],
+        [".product-showcase img", "alt", "Featured smartphones, tablets, laptops, wearables and accessories", "هواتف ذكية وأجهزة لوحية وحواسيب محمولة وساعات وإكسسوارات مميزة"],
+        [".offer-image-card img", "alt", "Arbeel Trading electronics promotion for Dubai and Erbil, Iraq", "إعلان شركة أربيل للتجارة للأجهزة الإلكترونية في دبي وأربيل، العراق"],
+        [".contact-image-card img", "alt", "Arbeel Trading office in Irbil", "مكتب شركة أربيل للتجارة في أربيل"],
+        ["#back-to-top", "aria-label", "Back to top", "العودة إلى الأعلى"]
+      ];
+
+      let currentLanguage = "en";
+
+      function translateTextNodes(language) {
+        translatableNodes.forEach(node => {
+          const source = originalText.get(node);
+          const key = source.trim();
+          node.nodeValue = language === "ar"
+            ? source.replace(key, arabicText[key])
+            : source;
+        });
+      }
+
+      function setLanguage(language, remember = true) {
+        currentLanguage = language === "ar" ? "ar" : "en";
+        const isArabic = currentLanguage === "ar";
+
+        document.documentElement.lang = currentLanguage;
+        document.documentElement.dir = isArabic ? "rtl" : "ltr";
+        document.title = isArabic
+          ? "Arbeel Trading FZE — مورّد الهواتف الذكية للشركات في العراق"
+          : "Arbeel Trading FZE — IRAQ's Trusted B2B Smartphone Supplier";
+        document.querySelector('meta[name="description"]').content = isArabic
+          ? "شركة أربيل للتجارة مورّد للهواتف الذكية والإكسسوارات والإلكترونيات بالجملة للشركات في العراق."
+          : "Arbeel Trading FZE — IRAQ's trusted B2B smartphone supplier. Wholesale smartphones, accessories and electronics with competitive prices and fast IRAQ shipping.";
+
+        translateTextNodes(currentLanguage);
+
+        localizedAttributes.forEach(([selector, attribute, english, arabic]) => {
+          document.querySelectorAll(selector).forEach(element => {
+            element.setAttribute(attribute, isArabic ? arabic : english);
+          });
+        });
+
+        document.querySelectorAll(".ltr-content").forEach(element => {
+          element.setAttribute("dir", "ltr");
+        });
+
+        languageButton.textContent = isArabic ? "EN" : "العربية";
+        languageButton.setAttribute(
+          "aria-label",
+          isArabic ? "تغيير اللغة إلى الإنجليزية" : "Change language to Arabic"
+        );
+
+        const isMenuOpen = mobileNav.classList.contains("open");
+        menuButton.setAttribute(
+          "aria-label",
+          isArabic
+            ? (isMenuOpen ? "إغلاق قائمة التنقل" : "فتح قائمة التنقل")
+            : (isMenuOpen ? "Close navigation" : "Open navigation")
+        );
+
+        if (remember) {
+          try {
+            localStorage.setItem("site-language", currentLanguage);
+          } catch {}
+        }
+      }
+
+      languageButton.addEventListener("click", () => {
+        setLanguage(currentLanguage === "en" ? "ar" : "en");
+      });
+
+      let savedLanguage = "";
+      try {
+        savedLanguage = localStorage.getItem("site-language") || "";
+      } catch {}
+      const preferredLanguage = savedLanguage ||
+        (navigator.language.toLowerCase().startsWith("ar") ? "ar" : "en");
+      setLanguage(preferredLanguage, false);
 
       menuButton.addEventListener("click", () => {
         const isOpen = mobileNav.classList.toggle("open");
         menuButton.setAttribute("aria-expanded", String(isOpen));
         menuButton.setAttribute(
           "aria-label",
-          isOpen ? "Close navigation" : "Open navigation"
+          currentLanguage === "ar"
+            ? (isOpen ? "إغلاق قائمة التنقل" : "فتح قائمة التنقل")
+            : (isOpen ? "Close navigation" : "Open navigation")
         );
       });
 
@@ -2383,47 +2423,11 @@
         link.addEventListener("click", () => {
           mobileNav.classList.remove("open");
           menuButton.setAttribute("aria-expanded", "false");
-          menuButton.setAttribute("aria-label", "Open navigation");
+          menuButton.setAttribute(
+            "aria-label",
+            currentLanguage === "ar" ? "فتح قائمة التنقل" : "Open navigation"
+          );
         });
-      });
-
-      const copyButton = document.querySelector("#copy-feed");
-      const feedUrl = document.querySelector("#feed-url");
-
-      copyButton.addEventListener("click", async () => {
-        const url = feedUrl.textContent.trim();
-        const label = copyButton.querySelector("span");
-
-        try {
-          if (navigator.clipboard && window.isSecureContext) {
-            await navigator.clipboard.writeText(url);
-          } else {
-            const textarea = document.createElement("textarea");
-            textarea.value = url;
-            textarea.style.position = "fixed";
-            textarea.style.opacity = "0";
-            document.body.appendChild(textarea);
-            textarea.select();
-
-            const copied = document.execCommand("copy");
-            textarea.remove();
-
-            if (!copied) throw new Error("Copy unavailable");
-          }
-
-          label.textContent = "Copied!";
-        } catch {
-          label.textContent = "Select URL to copy";
-          const range = document.createRange();
-          range.selectNodeContents(feedUrl);
-          const selection = window.getSelection();
-          selection.removeAllRanges();
-          selection.addRange(range);
-        }
-
-        window.setTimeout(() => {
-          label.textContent = "Copy feed URL";
-        }, 2200);
       });
 
       const backToTop = document.querySelector("#back-to-top");
